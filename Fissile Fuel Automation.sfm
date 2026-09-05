@@ -1,5 +1,13 @@
 NAME "Fissile Fuel Automation"
 -- All Inputs are pulled from an AE2 Interface 
+
+-- Energy Logistics
+every 20 ticks do 
+   input fe:: from "Battery"
+   output fe:: to each "Device"
+end
+
+-- Input and Output Logistics
 every 20 ticks do 
     input item:mekanism:ingot_uranium from "Interface"
     output item:mekanism:ingot_uranium to "Enrichment Chamber - Yellow Cake Uranium" top side
@@ -57,4 +65,19 @@ every 20 ticks do
 
     input gas:mekanism:hydrofluoric_acid from "Chemical Dissolution Chamber - Hydrofluoric Acid" bottom side
     output gas:mekanism:hydrofluoric_acid to "Interface"
+
+    input gas:mekanism:hydrofluoric_acid from "Interface"
+    output gas:mekanism:hydrofluoric_acid to "Chemical Infuser - Uranium Hexafluoride" top side
+
+    input gas:mekanism:uranium_oxide from "Interface"
+    output gas:mekanism:uranium_oxide to "Chemical Infuser - Uranium Hexafluoride" top side
+
+    input gas:mekanism:uranium_hexafluoride from "Chemical Infuser - Uranium Hexafluoride" bottom side
+    output gas:mekanism:uranium_hexafluoride to "Interface"
+
+    input gas:mekanism:uranium_hexafluoride from "Interface"
+    output gas:mekanism:uranium_hexafluoride to "Isotopic Centrifuge - Fissile Fuel" top side
+
+    input gas:mekanism:fissile_fuel from "Isotopic Centrifuge - Fissile Fuel" bottom side
+    output gas:mekanism:fissile_fuel to "Interface"
 end
