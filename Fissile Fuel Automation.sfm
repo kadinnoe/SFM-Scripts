@@ -2,9 +2,9 @@ NAME "Fissile Fuel Automation"
 -- All Inputs are pulled from an AE2 Interface 
 every 20 ticks do 
     input item:mekanism:ingot_uranium from "Interface"
-    output item:mekanism:ingot_uranium to "Enrichment Chamber - Yellow Cake Uranium"
+    output item:mekanism:ingot_uranium to "Enrichment Chamber - Yellow Cake Uranium" top side
 
-    input item:mekanism:yellow_cake_uranium from "Enrichment Chamber - Yellow Cake Uranium"
+    input item:mekanism:yellow_cake_uranium from "Enrichment Chamber - Yellow Cake Uranium" bottom side
     output item:mekanism:yellow_cake_uranium to "Interface"
 
     input item:mekanism:yellow_cake_uranium from "Interface"
@@ -12,4 +12,49 @@ every 20 ticks do
 
     input gas:mekanism:uranium_oxide from "Chemical Oxidizer - Uranium Oxide" bottom side
     output gas:mekanism:uranium_oxide to "Interface"
+
+    input fluid:minecraft:water from "Interface"
+    output fluid:minecraft:water to "Electrolytic Separator - Hydrogen and Oxygen" top side
+
+    input gas:mekanism:oxygen from "Electrolytic Separator - Hydrogen and Oxygen" bottom side
+    output gas:mekanism:oxygen to "Interface"
+
+    input gas:mekanism:hydrogen from "Electrolytic Separator - Hydrogen and Oxygen" bottom side
+    output gas:mekanism:hydrogen to "Interface"
+
+    input item:thermal:sulfur_dust from "Interface"
+    output item:thermal:sulfur_dust to "Chemical Oxidizer - Sulfur Dioxide" top side
+
+    input gas:mekanism:sulfur_dioxide from "Chemical Oxidizer - Sulfur Dioxide" bottom side
+    output gas:mekanism:sulfur_dioxide to "Interface"
+
+    input gas:mekanism:sulfur_dioxide from "Interface"
+    output gas:mekanism:sulfur_dioxide to "Chemical Infuser - Sulfur Trioxide" top side
+
+    input gas:mekanism:sulfur_trioxide from "Chemical Oxidizer - Sulfur Trioxide" bottom side
+    output gas:mekanism:sulfur_trioxide to "Interface"
+
+    input fluid:minecraft:water from "Interface"
+    output fluid:minecraft:water to "Rotary Condensentrator - Water Vapor" top side
+
+    input gas:mekanism:water_vapor from "Rotary Condensentrator - Water Vapor" bottom side
+    output gas:mekanism:water_vapor to "Interface"
+
+    input gas:mekanism:water_vapor from "Interface"
+    output gas:mekanism:water_vapor to "Chemical Infuser - Sulfuric Acid" top side
+
+    input gas:mekanism:sulfur_trioxide from "Interface"
+    output gas:mekanism:sulfur_trioxide to "Chemical Infuser - Sulfuric Acid" top side
+
+    input gas:mekanism:sulfuric_acid from "Chemical Infuser - Sulfuric Acid" bottom side
+    output gas:mekanism:sulfuric_acid to "Interface"
+
+    input item:mekanism:fluorite_gem from "Interface"
+    output item:mekanism:fluorite_gem to "Chemical Dissolution Chamber - Hydrofluoric Acid" top side
+
+    input gas:mekanism:sulfuric_acid from "Interface"
+    output gas:mekanism:sulfuric_acid to "Chemical Dissolution Chamber - Hydrofluoric Acid" top side
+
+    input gas:mekanism:hydrofluoric_acid from "Chemical Dissolution Chamber - Hydrofluoric Acid" bottom side
+    output gas:mekanism:hydrofluoric_acid to "Interface"
 end
