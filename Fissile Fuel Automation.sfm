@@ -1,0 +1,15 @@
+NAME "Fissile Fuel Automation"
+-- All Inputs are pulled from an AE2 Interface 
+every 20 ticks do 
+    input item:mekanism:ingot_uranium from "Interface"
+    output item:mekanism:ingot_uranium to "Enrichment Chamber - Yellow Cake Uranium"
+
+    input item:mekanism:yellow_cake_uranium from "Enrichment Chamber - Yellow Cake Uranium"
+    output item:mekanism:yellow_cake_uranium to "Interface"
+
+    input item:mekanism:yellow_cake_uranium from "Interface"
+    output item:mekanism:yellow_cake_uranium to "Chemical Oxidizer - Uranium Oxide" top side
+
+    input gas:mekanism:uranium_oxide from "Chemical Oxidizer - Uranium Oxide" bottom side
+    output gas:mekanism:uranium_oxide to "Interface"
+end
