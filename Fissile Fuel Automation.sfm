@@ -8,7 +8,7 @@ every tick do
 end
 
 -- Input and Output Logistics
-every 20 ticks do
+every tick do
     input item:mekanism:ingot_uranium from "Interface" top side
     output item:mekanism:ingot_uranium to "Enrichment Chamber - Yellow Cake Uranium" top side
 
@@ -80,4 +80,16 @@ every 20 ticks do
 
     input gas:mekanism:fissile_fuel from "Isotopic Centrifuge - Fissile Fuel" bottom side
     output gas:mekanism:fissile_fuel to "Interface" top side
+
+    input gas:mekanism:nuclear_waste from "Interface" top side
+    output gas:mekanism:nuclear_waste to "Solar Neutron Activator - Polonium" bottom side
+
+    input gas:mekanism:polonium from "Solar Neutron Activator - Polonium" bottom side
+    output gas:mekanism:polonium to "Interface" top side
+
+    input gas:mekanism:nuclear_waste from "Interface" top side
+    output gas:mekanism:nuclear_waste to "Isotopic Centrifuge - Plutonium" bottom side
+
+    input gas:mekanism:plutonium from "Isotopic Centrifuge - Plutonium" bottom side
+    output gas:mekanism:plutonium to "Interface" top side
 end
