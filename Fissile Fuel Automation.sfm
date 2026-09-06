@@ -1,83 +1,86 @@
 NAME "Fissile Fuel Automation"
--- All Inputs are pulled from an AE2 Interface 
+-- All Inputs are pulled from an AE2 Interface
 
 -- Energy Logistics
-every 20 ticks do 
-   input fe:: from "Battery"
-   output fe:: to each "Device"
+every tick do
+   input fe:: from "Battery" bottom side
+   output fe:: to each "Device" each side
 end
 
 -- Input and Output Logistics
-every 20 ticks do 
-    input item:mekanism:ingot_uranium from "Interface"
+every 20 ticks do
+    input item:mekanism:ingot_uranium from "Interface" top side
     output item:mekanism:ingot_uranium to "Enrichment Chamber - Yellow Cake Uranium" top side
 
     input item:mekanism:yellow_cake_uranium from "Enrichment Chamber - Yellow Cake Uranium" bottom side
-    output item:mekanism:yellow_cake_uranium to "Interface"
+    output item:mekanism:yellow_cake_uranium to "Interface" top side
 
-    input item:mekanism:yellow_cake_uranium from "Interface"
+    input item:mekanism:yellow_cake_uranium from "Interface" top side
     output item:mekanism:yellow_cake_uranium to "Chemical Oxidizer - Uranium Oxide" top side
 
     input gas:mekanism:uranium_oxide from "Chemical Oxidizer - Uranium Oxide" bottom side
-    output gas:mekanism:uranium_oxide to "Interface"
+    output gas:mekanism:uranium_oxide to "Interface" top side
 
-    input fluid:minecraft:water from "Interface"
+    input fluid:minecraft:water from "Interface" top side
     output fluid:minecraft:water to "Electrolytic Separator - Hydrogen and Oxygen" top side
 
-    input gas:mekanism:oxygen from "Electrolytic Separator - Hydrogen and Oxygen" bottom side
-    output gas:mekanism:oxygen to "Interface"
+    input gas:mekanism:oxygen from "Electrolytic Separator - Hydrogen and Oxygen" west side
+    output gas:mekanism:oxygen to "Interface" top side
 
-    input gas:mekanism:hydrogen from "Electrolytic Separator - Hydrogen and Oxygen" bottom side
-    output gas:mekanism:hydrogen to "Interface"
+    input gas:mekanism:hydrogen from "Electrolytic Separator - Hydrogen and Oxygen" east side
+    output gas:mekanism:hydrogen to "Interface" top side
 
-    input item:thermal:sulfur_dust from "Interface"
+    input item:thermal:sulfur_dust from "Interface" top side
     output item:thermal:sulfur_dust to "Chemical Oxidizer - Sulfur Dioxide" top side
 
     input gas:mekanism:sulfur_dioxide from "Chemical Oxidizer - Sulfur Dioxide" bottom side
-    output gas:mekanism:sulfur_dioxide to "Interface"
+    output gas:mekanism:sulfur_dioxide to "Interface" top side
 
-    input gas:mekanism:sulfur_dioxide from "Interface"
+    input gas:mekanism:sulfur_dioxide from "Interface" top side
     output gas:mekanism:sulfur_dioxide to "Chemical Infuser - Sulfur Trioxide" top side
 
-    input gas:mekanism:sulfur_trioxide from "Chemical Oxidizer - Sulfur Trioxide" bottom side
-    output gas:mekanism:sulfur_trioxide to "Interface"
+    input gas:mekanism:oxygen from "Interface" top side
+    output gas:mekanism:oxygen to "Chemical Infuser - Sulfur Trioxide" top side
 
-    input fluid:minecraft:water from "Interface"
+    input gas:mekanism:sulfur_trioxide from "Chemical Infuser - Sulfur Trioxide" bottom side
+    output gas:mekanism:sulfur_trioxide to "Interface" top side
+
+    input fluid:minecraft:water from "Interface" top side
     output fluid:minecraft:water to "Rotary Condensentrator - Water Vapor" top side
 
     input gas:mekanism:water_vapor from "Rotary Condensentrator - Water Vapor" bottom side
-    output gas:mekanism:water_vapor to "Interface"
+    output gas:mekanism:water_vapor to "Interface" top side
 
-    input gas:mekanism:water_vapor from "Interface"
+    input gas:mekanism:water_vapor from "Interface" top side
     output gas:mekanism:water_vapor to "Chemical Infuser - Sulfuric Acid" top side
 
-    input gas:mekanism:sulfur_trioxide from "Interface"
+    input gas:mekanism:sulfur_trioxide from "Interface" top side
     output gas:mekanism:sulfur_trioxide to "Chemical Infuser - Sulfuric Acid" top side
 
     input gas:mekanism:sulfuric_acid from "Chemical Infuser - Sulfuric Acid" bottom side
-    output gas:mekanism:sulfuric_acid to "Interface"
+    output gas:mekanism:sulfuric_acid to "Interface" top side
 
-    input item:mekanism:fluorite_gem from "Interface"
+    input item:mekanism:fluorite_gem from "Interface" top side
     output item:mekanism:fluorite_gem to "Chemical Dissolution Chamber - Hydrofluoric Acid" top side
 
-    input gas:mekanism:sulfuric_acid from "Interface"
+    input gas:mekanism:sulfuric_acid from "Interface" top side
     output gas:mekanism:sulfuric_acid to "Chemical Dissolution Chamber - Hydrofluoric Acid" top side
 
     input gas:mekanism:hydrofluoric_acid from "Chemical Dissolution Chamber - Hydrofluoric Acid" bottom side
-    output gas:mekanism:hydrofluoric_acid to "Interface"
+    output gas:mekanism:hydrofluoric_acid to "Interface" top side
 
-    input gas:mekanism:hydrofluoric_acid from "Interface"
+    input gas:mekanism:hydrofluoric_acid from "Interface" top side
     output gas:mekanism:hydrofluoric_acid to "Chemical Infuser - Uranium Hexafluoride" top side
 
-    input gas:mekanism:uranium_oxide from "Interface"
+    input gas:mekanism:uranium_oxide from "Interface" top side
     output gas:mekanism:uranium_oxide to "Chemical Infuser - Uranium Hexafluoride" top side
 
     input gas:mekanism:uranium_hexafluoride from "Chemical Infuser - Uranium Hexafluoride" bottom side
-    output gas:mekanism:uranium_hexafluoride to "Interface"
+    output gas:mekanism:uranium_hexafluoride to "Interface" top side
 
-    input gas:mekanism:uranium_hexafluoride from "Interface"
-    output gas:mekanism:uranium_hexafluoride to "Isotopic Centrifuge - Fissile Fuel" top side
+    input gas:mekanism:uranium_hexafluoride from "Interface" top side
+    output gas:mekanism:uranium_hexafluoride to "Isotopic Centrifuge - Fissile Fuel" bottom side
 
     input gas:mekanism:fissile_fuel from "Isotopic Centrifuge - Fissile Fuel" bottom side
-    output gas:mekanism:fissile_fuel to "Interface"
+    output gas:mekanism:fissile_fuel to "Interface" top side
 end
