@@ -27,9 +27,6 @@ every 20 ticks do
     input gas:mekanism:oxygen from "Electrolytic Separator - Hydrogen and Oxygen" west side
     output gas:mekanism:oxygen to "Interface" top side
 
-    input gas:mekanism:hydrogen from "Electrolytic Separator - Hydrogen and Oxygen" east side
-    output gas:mekanism:hydrogen to "Interface" top side
-
     input item:thermal:sulfur_dust from "Interface" top side
     output item:thermal:sulfur_dust to "Chemical Oxidizer - Sulfur Dioxide" top side
 
