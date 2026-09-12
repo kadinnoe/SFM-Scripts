@@ -8,7 +8,7 @@ every tick do
 end
 
 -- Input and Output Logistics
-every tick do
+every 20 ticks do
     input item:mekanism:ingot_uranium from "Interface" top side
     output item:mekanism:ingot_uranium to "Enrichment Chamber - Yellow Cake Uranium" top side
 
@@ -92,4 +92,22 @@ every tick do
 
     input gas:mekanism:plutonium from "Isotopic Centrifuge - Plutonium" bottom side
     output gas:mekanism:plutonium to "Interface" top side
+
+    input gas:mekanism:polonium from "Interface" top side
+    output gas:mekanism:polonium to "Pressurized Reaction Chamber - Polonium Pellet" top side
+
+    input item:mekanism:dust_fluorite from "Interface" top side
+    output item:mekanism:dust_fluorite to "Pressurized Reaction Chamber - Polonium Pellet" top side
+
+    input fluid:minecraft:water from "Interface" top side
+    output fluid:minecraft:water to "Pressurized Reaction Chamber - Plutonium Pellet" top side
+
+    input gas:mekanism:polonium from "Interface" top side
+    output gas:mekanism:polonium to "Pressurized Reaction Chamber - Plutonium Pellet" top side
+
+    input item:mekanism:dust_fluorite from "Interface" top side
+    output item:mekanism:dust_fluorite to "Pressurized Reaction Chamber - Plutonium Pellet" top side
+
+    input fluid:minecraft:water from "Interface" top side
+    output fluid:minecraft:water to "Pressurized Reaction Chamber - Plutonium Pellet" top side
 end
