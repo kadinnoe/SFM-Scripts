@@ -100,7 +100,7 @@ every 20 ticks do
     output item:mekanism:dust_fluorite to "Pressurized Reaction Chamber - Polonium Pellet" top side
 
     input fluid:minecraft:water from "Interface" top side
-    output fluid:minecraft:water to "Pressurized Reaction Chamber - Plutonium Pellet" top side
+    output fluid:minecraft:water to "Pressurized Reaction Chamber - Polonium Pellet" top side
 
     input gas:mekanism:polonium from "Interface" top side
     output gas:mekanism:polonium to "Pressurized Reaction Chamber - Plutonium Pellet" top side
