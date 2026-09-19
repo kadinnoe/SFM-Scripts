@@ -1,125 +1,125 @@
 NAME "Fissile Fuel Automation"
--- All Inputs are pulled from an AE2 Interface
+-- All Inputs are pulled from each an AE2 Interface
 
 -- Energy Logistics
 every tick do
-   input fe:: from "Battery" bottom side
+   input fe:: from each "Battery" bottom side
    output fe:: to each "Device" each side
 end
 
 -- Input and Output Logistics
 every 20 ticks do
-    input item:mekanism:ingot_uranium from "Interface" top side
-    output item:mekanism:ingot_uranium to "Enrichment Chamber - Yellow Cake Uranium" top side
+    input item:mekanism:ingot_uranium from each "Interface" top side
+    output item:mekanism:ingot_uranium to each "Enrichment Chamber - Yellow Cake Uranium" top side
 
-    input item:mekanism:yellow_cake_uranium from "Enrichment Chamber - Yellow Cake Uranium" bottom side
-    output item:mekanism:yellow_cake_uranium to "Interface" top side
+    input item:mekanism:yellow_cake_uranium from each "Enrichment Chamber - Yellow Cake Uranium" bottom side
+    output item:mekanism:yellow_cake_uranium to each "Interface" top side
 
-    input item:mekanism:yellow_cake_uranium from "Interface" top side
-    output item:mekanism:yellow_cake_uranium to "Chemical Oxidizer - Uranium Oxide" top side
+    input item:mekanism:yellow_cake_uranium from each "Interface" top side
+    output item:mekanism:yellow_cake_uranium to each "Chemical Oxidizer - Uranium Oxide" top side
 
-    input gas:mekanism:uranium_oxide from "Chemical Oxidizer - Uranium Oxide" bottom side
-    output gas:mekanism:uranium_oxide to "Interface" top side
+    input gas:mekanism:uranium_oxide from each "Chemical Oxidizer - Uranium Oxide" bottom side
+    output gas:mekanism:uranium_oxide to each "Interface" top side
 
-    input fluid:minecraft:water from "Interface" top side
-    output fluid:minecraft:water to "Electrolytic Separator - Hydrogen and Oxygen" top side
+    input fluid:minecraft:water from each "Interface" top side
+    output fluid:minecraft:water to each "Electrolytic Separator - Hydrogen and Oxygen" top side
 
-    input gas:mekanism:oxygen from "Electrolytic Separator - Hydrogen and Oxygen" west side
-    output gas:mekanism:oxygen to "Interface" top side
+    input gas:mekanism:oxygen from each "Electrolytic Separator - Hydrogen and Oxygen" west side
+    output gas:mekanism:oxygen to each "Interface" top side
 
-    input item:thermal:sulfur_dust from "Interface" top side
-    output item:thermal:sulfur_dust to "Chemical Oxidizer - Sulfur Dioxide" top side
+    input item:thermal:sulfur_dust from each "Interface" top side
+    output item:thermal:sulfur_dust to each "Chemical Oxidizer - Sulfur Dioxide" top side
 
-    input gas:mekanism:sulfur_dioxide from "Chemical Oxidizer - Sulfur Dioxide" bottom side
-    output gas:mekanism:sulfur_dioxide to "Interface" top side
+    input gas:mekanism:sulfur_dioxide from each "Chemical Oxidizer - Sulfur Dioxide" bottom side
+    output gas:mekanism:sulfur_dioxide to each "Interface" top side
 
-    input gas:mekanism:sulfur_dioxide from "Interface" top side
-    output gas:mekanism:sulfur_dioxide to "Chemical Infuser - Sulfur Trioxide" top side
+    input gas:mekanism:sulfur_dioxide from each "Interface" top side
+    output gas:mekanism:sulfur_dioxide to each "Chemical Infuser - Sulfur Trioxide" top side
 
-    input gas:mekanism:oxygen from "Interface" top side
-    output gas:mekanism:oxygen to "Chemical Infuser - Sulfur Trioxide" top side
+    input gas:mekanism:oxygen from each "Interface" top side
+    output gas:mekanism:oxygen to each "Chemical Infuser - Sulfur Trioxide" top side
 
-    input gas:mekanism:sulfur_trioxide from "Chemical Infuser - Sulfur Trioxide" bottom side
-    output gas:mekanism:sulfur_trioxide to "Interface" top side
+    input gas:mekanism:sulfur_trioxide from each "Chemical Infuser - Sulfur Trioxide" bottom side
+    output gas:mekanism:sulfur_trioxide to each "Interface" top side
 
-    input fluid:minecraft:water from "Interface" top side
-    output fluid:minecraft:water to "Rotary Condensentrator - Water Vapor" top side
+    input fluid:minecraft:water from each "Interface" top side
+    output fluid:minecraft:water to each "Rotary Condensentrator - Water Vapor" top side
 
-    input gas:mekanism:water_vapor from "Rotary Condensentrator - Water Vapor" bottom side
-    output gas:mekanism:water_vapor to "Interface" top side
+    input gas:mekanism:water_vapor from each "Rotary Condensentrator - Water Vapor" bottom side
+    output gas:mekanism:water_vapor to each "Interface" top side
 
-    input gas:mekanism:water_vapor from "Interface" top side
-    output gas:mekanism:water_vapor to "Chemical Infuser - Sulfuric Acid" top side
+    input gas:mekanism:water_vapor from each "Interface" top side
+    output gas:mekanism:water_vapor to each "Chemical Infuser - Sulfuric Acid" top side
 
-    input gas:mekanism:sulfur_trioxide from "Interface" top side
-    output gas:mekanism:sulfur_trioxide to "Chemical Infuser - Sulfuric Acid" top side
+    input gas:mekanism:sulfur_trioxide from each "Interface" top side
+    output gas:mekanism:sulfur_trioxide to each "Chemical Infuser - Sulfuric Acid" top side
 
-    input gas:mekanism:sulfuric_acid from "Chemical Infuser - Sulfuric Acid" bottom side
-    output gas:mekanism:sulfuric_acid to "Interface" top side
+    input gas:mekanism:sulfuric_acid from each "Chemical Infuser - Sulfuric Acid" bottom side
+    output gas:mekanism:sulfuric_acid to each "Interface" top side
 
-    input item:mekanism:fluorite_gem from "Interface" top side
-    output item:mekanism:fluorite_gem to "Chemical Dissolution Chamber - Hydrofluoric Acid" top side
+    input item:mekanism:fluorite_gem from each "Interface" top side
+    output item:mekanism:fluorite_gem to each "Chemical Dissolution Chamber - Hydrofluoric Acid" top side
 
-    input gas:mekanism:sulfuric_acid from "Interface" top side
-    output gas:mekanism:sulfuric_acid to "Chemical Dissolution Chamber - Hydrofluoric Acid" top side
+    input gas:mekanism:sulfuric_acid from each "Interface" top side
+    output gas:mekanism:sulfuric_acid to each "Chemical Dissolution Chamber - Hydrofluoric Acid" top side
 
-    input gas:mekanism:hydrofluoric_acid from "Chemical Dissolution Chamber - Hydrofluoric Acid" bottom side
-    output gas:mekanism:hydrofluoric_acid to "Interface" top side
+    input gas:mekanism:hydrofluoric_acid from each "Chemical Dissolution Chamber - Hydrofluoric Acid" bottom side
+    output gas:mekanism:hydrofluoric_acid to each "Interface" top side
 
-    input gas:mekanism:hydrofluoric_acid from "Interface" top side
-    output gas:mekanism:hydrofluoric_acid to "Chemical Infuser - Uranium Hexafluoride" top side
+    input gas:mekanism:hydrofluoric_acid from each "Interface" top side
+    output gas:mekanism:hydrofluoric_acid to each "Chemical Infuser - Uranium Hexafluoride" top side
 
-    input gas:mekanism:uranium_oxide from "Interface" top side
-    output gas:mekanism:uranium_oxide to "Chemical Infuser - Uranium Hexafluoride" top side
+    input gas:mekanism:uranium_oxide from each "Interface" top side
+    output gas:mekanism:uranium_oxide to each "Chemical Infuser - Uranium Hexafluoride" top side
 
-    input gas:mekanism:uranium_hexafluoride from "Chemical Infuser - Uranium Hexafluoride" bottom side
-    output gas:mekanism:uranium_hexafluoride to "Interface" top side
+    input gas:mekanism:uranium_hexafluoride from each "Chemical Infuser - Uranium Hexafluoride" bottom side
+    output gas:mekanism:uranium_hexafluoride to each "Interface" top side
 
-    input gas:mekanism:uranium_hexafluoride from "Interface" top side
-    output gas:mekanism:uranium_hexafluoride to "Isotopic Centrifuge - Fissile Fuel" bottom side
+    input gas:mekanism:uranium_hexafluoride from each "Interface" top side
+    output gas:mekanism:uranium_hexafluoride to each "Isotopic Centrifuge - Fissile Fuel" bottom side
 
-    input gas:mekanism:fissile_fuel from "Isotopic Centrifuge - Fissile Fuel" bottom side
-    output gas:mekanism:fissile_fuel to "Interface" top side
+    input gas:mekanism:fissile_fuel from each "Isotopic Centrifuge - Fissile Fuel" bottom side
+    output gas:mekanism:fissile_fuel to each "Interface" top side
 
-    input gas:mekanism:nuclear_waste from "Interface" top side
-    output gas:mekanism:nuclear_waste to "Solar Neutron Activator - Polonium" bottom side
+    input gas:mekanism:nuclear_waste from each "Interface" top side
+    output gas:mekanism:nuclear_waste to each "Solar Neutron Activator - Polonium" bottom side
 
-    input gas:mekanism:polonium from "Solar Neutron Activator - Polonium" bottom side
-    output gas:mekanism:polonium to "Interface" top side
+    input gas:mekanism:polonium from each "Solar Neutron Activator - Polonium" bottom side
+    output gas:mekanism:polonium to each "Interface" top side
 
-    input gas:mekanism:nuclear_waste from "Interface" top side
-    output gas:mekanism:nuclear_waste to "Isotopic Centrifuge - Plutonium" bottom side
+    input gas:mekanism:nuclear_waste from each "Interface" top side
+    output gas:mekanism:nuclear_waste to each "Isotopic Centrifuge - Plutonium" bottom side
 
-    input gas:mekanism:plutonium from "Isotopic Centrifuge - Plutonium" bottom side
-    output gas:mekanism:plutonium to "Interface" top side
+    input gas:mekanism:plutonium from each "Isotopic Centrifuge - Plutonium" bottom side
+    output gas:mekanism:plutonium to each "Interface" top side
 
-    input gas:mekanism:polonium from "Interface" top side
-    output gas:mekanism:polonium to "Pressurized Reaction Chamber - Polonium Pellet" top side
+    input gas:mekanism:polonium from each "Interface" top side
+    output gas:mekanism:polonium to each "Pressurized Reaction Chamber - Polonium Pellet" top side
 
-    input item:mekanism:dust_fluorite from "Interface" top side
-    output item:mekanism:dust_fluorite to "Pressurized Reaction Chamber - Polonium Pellet" top side
+    input item:mekanism:dust_fluorite from each "Interface" top side
+    output item:mekanism:dust_fluorite to each "Pressurized Reaction Chamber - Polonium Pellet" top side
 
-    input fluid:minecraft:water from "Interface" top side
-    output fluid:minecraft:water to "Pressurized Reaction Chamber - Polonium Pellet" top side
+    input fluid:minecraft:water from each "Interface" top side
+    output fluid:minecraft:water to each "Pressurized Reaction Chamber - Polonium Pellet" top side
 
-    input gas:mekanism:spent_nuclear_waste from "Pressurized Reaction Chamber - Polonium Pellet" bottom side
-    output gas:mekanism:spent_nuclear_waste to "Interface" top side
+    input gas:mekanism:spent_nuclear_waste from each "Pressurized Reaction Chamber - Polonium Pellet" bottom side
+    output gas:mekanism:spent_nuclear_waste to each "Interface" top side
 
-    input item:mekanism:pellet_polonium from "Pressurized Reaction Chamber - Polonium Pellet" bottom side
-    output item:mekanism:pellet_polonium to "Interface" top side
+    input item:mekanism:pellet_polonium from each "Pressurized Reaction Chamber - Polonium Pellet" bottom side
+    output item:mekanism:pellet_polonium to each "Interface" top side
 
-    input gas:mekanism:plutonium from "Interface" top side
-    output gas:mekanism:plutonium to "Pressurized Reaction Chamber - Plutonium Pellet" top side
+    input gas:mekanism:plutonium from each "Interface" top side
+    output gas:mekanism:plutonium to each "Pressurized Reaction Chamber - Plutonium Pellet" top side
 
-    input item:mekanism:dust_fluorite from "Interface" top side
-    output item:mekanism:dust_fluorite to "Pressurized Reaction Chamber - Plutonium Pellet" top side
+    input item:mekanism:dust_fluorite from each "Interface" top side
+    output item:mekanism:dust_fluorite to each "Pressurized Reaction Chamber - Plutonium Pellet" top side
 
-    input fluid:minecraft:water from "Interface" top side
-    output fluid:minecraft:water to "Pressurized Reaction Chamber - Plutonium Pellet" top side
+    input fluid:minecraft:water from each "Interface" top side
+    output fluid:minecraft:water to each "Pressurized Reaction Chamber - Plutonium Pellet" top side
 
-    input gas:mekanism:spent_nuclear_waste from "Pressurized Reaction Chamber - Plutonium Pellet" bottom side
-    output gas:mekanism:spent_nuclear_waste to "Interface" top side
+    input gas:mekanism:spent_nuclear_waste from each "Pressurized Reaction Chamber - Plutonium Pellet" bottom side
+    output gas:mekanism:spent_nuclear_waste to each "Interface" top side
 
-    input item:mekanism:pellet_plutonium from "Pressurized Reaction Chamber - Plutonium Pellet" bottom side
-    output item:mekanism:pellet_plutonium to "Interface" top side
+    input item:mekanism:pellet_plutonium from each "Pressurized Reaction Chamber - Plutonium Pellet" bottom side
+    output item:mekanism:pellet_plutonium to each "Interface" top side
 end
